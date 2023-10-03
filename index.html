@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+<div id="wrapper">
+  <section>
+    <svg height="500" width="600" viewBox="0 0 800 700" id="svg" onLoad="change('Frontend')">
+      <!-- onLoad="change('front end');">
+	-->
+      <style type="text/css">
+        #polyGraph {
+          fill: url(#MyGradient)
+        }
+      </style>
+      <defs>
+        <linearGradient id="MyGradient">
+          <stop offset="5%" stop-color="#ae059c"></stop>
+          <stop offset="95%" stop-color="#8418e5"></stop>
+        </linearGradient>
+      </defs>
+      <!-- pentagon, src: https://upload.wikimedia.org/wikipedia/commons/0/04/Pentagon.svg -->
+      <g style="transform: scale(0.85) translate(165px,160px);">
+        <polygon id="poly" points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691"></polygon>
+        <polygon id="poly1" points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691"></polygon>
+        <polygon id="poly2" points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691"></polygon>
+        <polygon id="polyGraph" points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691 "></polygon>
+      </g>
+      <!-- Legend -->
+      <g transform="translate(10, 10)">
+        <rect x="10" y="0" width="20" height="20" style="fill: #6b3bb4;"></rect>
+        <text x="45" y="15">Beginner</text>
+
+      </g>
+
+      <g transform="translate(195, 10)">
+        <rect x="10" y="0" width="20" height="20" style="fill: #4a108a;"></rect>
+        <text x="45" y="15">Intermediate</text>
+      </g>
+
+      <g transform="translate(425, 10)">
+        <rect x="10" y="0" width="20" height="20" style="fill: #3d1c63;"></rect>
+        <text x="45" y="15">Advanced</text>
+      </g>
+
+      <!-- Front end Labels -->
+      <g transform="translate(294,3)" id="Frontend" class="labels show">
+        <text x="63" y="115">React</text>
+        <text x="365" y="320">Angular</text>
+        <text x="240" y="640">Vue</text>
+        <text x="-95" y="640">Ionic</text>
+        <text x="-240" y="320">Ember</text>
+      </g>
+
+      <!-- Back end Labels -->
+      <g transform="translate(294,3)" id="Backend" class="labels">
+        <text x="53" y="115">Laravel</text>
+        <text x="365" y="320">Django</text>
+        <text x="175" y="640">Ruby on Rails</text>
+        <text x="-120" y="640">Spring Boot</text>
+        <text x="-275" y="320">Express</text>
+      </g>
+
+
+      <!-- UI design Labels -->
+      <g transform="translate(294,3)" id="UiDesign" class="labels">
+        <text x="35" y="115">Photoshop</text>
+        <text x="365" y="320">Mockflow</text>
+        <text x="195" y="640">Lightroom</text>
+        <text x="-125" y="640">Illustrator</text>
+        <text x="-265" y="320">Sketch</text>
+      </g>
+    </svg>
+    <nav>
+      <button class='active' onClick="change('Frontend', this)">Front end</button>
+      <button onClick="change('Backend', this)">Back end</button>
+      <button onClick="change('UiDesign', this)">UI design</button>
+    </nav>
+  </section>
+</div>
+	<script src="index.js"></script>
+  </body>
+</html>
